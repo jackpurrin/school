@@ -24,3 +24,7 @@ we had to learn how to make some art using the small basic graphics engine. he w
 ### lesson 6
 this was our final project and our biggest. we had to make a maze game.
 the teacher knocked down the criteria for the project AFTER i had completed it, but that was no big deal though. it ended out pretty cool and i got a bit of extra credit.
+
+### personal projects
+just made these beacause i was bored in class and had nothing else to do.
+they might be useful in the future though, as they are small, and take little power to run.

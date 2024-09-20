@@ -1,0 +1,18 @@
+GraphicsWindow.BackgroundColor = "black"
+GraphicsWindow.FontName = "Courier New"
+GraphicsWindow.FontBold = "False"
+GraphicsWindow.FontSize = "60"
+GraphicsWindow.BrushColor = "green"
+GraphicsWindow.Title = "Your mouse is located at..."
+GraphicsWindow.Height = "180"
+GraphicsWindow.Width = "475"
+
+While 1=1
+GraphicsWindow.DrawText(0,0,"Mouse X and Y")
+GraphicsWindow.DrawText(0,60,"X:")
+GraphicsWindow.DrawText(65,60,Mouse .MouseX)
+GraphicsWindow.DrawText(0,120,"Y:")
+GraphicsWindow.DrawText(65,120,Mouse .MouseY)
+Program.Delay(15)
+GraphicsWindow.Clear()
+EndWhile

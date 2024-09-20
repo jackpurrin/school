@@ -1,0 +1,16 @@
+'Mouse Debugger'
+GraphicsWindow.BackgroundColor = "black"
+GraphicsWindow.FontName = "Courier New"
+GraphicsWindow.FontBold = "False"
+GraphicsWindow.FontSize = "60"
+GraphicsWindow.BrushColor = "green"
+GraphicsWindow.Title = "Is your keyboard working?"
+GraphicsWindow.Height = "125"
+GraphicsWindow.Width = "620"
+delay = 25
+While 1=1
+  GraphicsWindow.DrawText(0,0,"Keyboard Debugger")
+  GraphicsWindow.DrawText(0,60,GraphicsWindow.LastKey)
+  Program.Delay(delay)
+  GraphicsWindow.Clear()
+EndWhile

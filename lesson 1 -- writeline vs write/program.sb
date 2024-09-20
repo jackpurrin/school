@@ -1,0 +1,23 @@
+'Vanity'
+
+TextWindow.BackgroundColor = "Black"
+TextWindow.Clear()
+TextWindow.ForegroundColor = "Green"
+
+
+'Line 1'
+TextWindow.Write("Hello World! ")
+'Line 1'
+TextWindow.WriteLine("Hello World! ")
+'Line 2'
+TextWindow.WriteLine("Today is great day!")
+'Line 3'
+TextWindow.WriteLine("Line 3 :o")
+'Line 4'
+TextWindow.WriteLine("How many more lines do we need?")
+'Line 5'
+TextWindow.WriteLine("Whats your name?")
+'Adds a variable'
+name = TextWindow.Read()
+'Line 6'
+TextWindow.WriteLine(name + ", nice to meet you.")

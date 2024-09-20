@@ -1,0 +1,101 @@
+'Lesson 7 -- Maze Game'
+
+'Vanity'
+Title = "Lesson 7 -- Maze Game"
+GraphicsWindow.BackgroundColor = "black"
+GraphicsWindow.Title = Title
+GraphicsWindow.Height = 740
+GraphicsWindow.Width = 740
+GraphicsWindow.CanResize = "No"
+GraphicsWindow.Clear()
+
+'checks for a key press, and then sets it to a variable'
+GraphicsWindow.KeyDown = keypressed
+
+'adds two varibles for the player's pos. x and y'
+x = 250
+y = 0
+
+'The maze filled in Binary, the original project was 12 by 12, but modified it a bit to allow for 15 by 15 mazes.'
+row[1] = "111110111111111"
+row[2] = "111110111111111"
+row[3] = "111110000000000"
+row[4] = "111100111101111"
+row[5] = "111001111101111"
+row[6] = "110011111101111"
+row[7] = "100111111101111"
+row[8] = "000111111101111"
+row[9] = "000000000001111"
+row[10] = "001111111101111"
+row[11] = "001111111100000"
+row[12] = "001111111101110"
+row[13] = "011111111111110"
+row[14] = "011111111111110"
+row[15] = "011111111111110"
+
+color = GraphicsWindow.GetRandomColor()
+GraphicsWindow.BrushColor = color
+
+'rows and colums'
+For r = 1 To 15
+For c = 1 To 15
+
+'starts to draw the maze'
+If Text.GetSubText(row[r], c, 1) = "1" Then
+  GraphicsWindow.FillRectangle((c * 50) -50, (r * 50) - 50, 50, 50)
+  color2 = color + 10
+  GraphicsWindow.BrushColor = color2
+  GraphicsWindow.FillRectangle(550, 500, 50, 50)
+  GraphicsWindow.BrushColor = color
+EndIf
+EndFor
+EndFor
+GraphicsWindow.ShowMessage("Welcome! Use ""W A S D"" to move and press space for debug tools. If the walls are hard to see, or if they're the same color as your player, reload the program! Find the right exit, and good luck!", "Instructions")
+
+'draws the player, then checks if the player is at the end point.'
+drawplayer()
+
+Sub drawplayer
+  GraphicsWindow.BrushColor = "white"
+  GraphicsWindow.FontSize = 35
+  GraphicsWindow.DrawText(x,y, "💀")
+  If x = 700 And y = 700 Then
+    GraphicsWindow.ShowMessage("Good job! That wasn't too hard, was it? If it was, get some help.", "You completed the maze")
+    Program.End()
+  EndIf
+  If x = 0 And y = 700 Then
+    GraphicsWindow.ShowMessage("Not quite... Not all maze wall colors mean the same thing...", "Hint")
+   EndIf 
+EndSub
+
+'deletes the player'
+Sub delplayer
+  GraphicsWindow.BrushColor = "black"
+  GraphicsWindow.FillRectangle(x, y, 50, 50)
+EndSub
+
+getcolor = GraphicsWindow.GetPixel(200,0) ' gets the color for the pixel "0,0" knowing theres always going to be a pixel there. for another function later'
+
+Sub keypressed 'this just checks for keys and coordinates to make sure the player can move, and if it can, it will. i made my program make a random color for every instance of the maze. so therefore, i know there is always a pixel on 0,0, i could fetch the color and input it there so the walls still work'
+  If GraphicsWindow.LastKey = "W" And y > 0 And GraphicsWindow.GetPixel(x + 25, y - 25) <> getcolor Then
+    delplayer() 'deletes the player'
+    y = y -50 'changes the player coords'
+    drawplayer() 'then proceeds to redraw the player'
+  ElseIf GraphicsWindow.LastKey = "S" and y < 700 and GraphicsWindow.GetPixel(x + 25, y +75) <> getcolor Then
+    delplayer()
+    y = y + 50
+    drawplayer()
+  ElseIf GraphicsWindow.LastKey = "A" and x > 0 and GraphicsWindow.GetPixel(x - 25, y + 25) <> getcolor Then
+    delplayer()
+    x = x - 50
+    drawplayer()
+  ElseIf GraphicsWindow.LastKey = "D" and x < 700 and GraphicsWindow.GetPixel(x + 75, y + 25) <> getcolor Then
+    delplayer()
+    x = x + 50
+    drawplayer()
+  Elseif GraphicsWindow.LastKey = "Space" Then
+    GraphicsWindow.ShowMessage("X: " + x + " Y: " + y + " Color: " + GraphicsWindow.GetPixel(x,y) + " and also redrawn the player." + " Can rezise the window? No." + " Window Size: W: 740 H: 740" , "debug")
+    delplayer()
+    drawplayer()
+EndIf
+EndSub

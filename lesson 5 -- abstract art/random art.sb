@@ -1,0 +1,48 @@
+'Lesson 5 -- Abstract Art'
+
+'Vanity'
+Title = "Lesson 5 -- Abstract Art"
+GraphicsWindow.BackgroundColor = "Black"
+GraphicsWindow.BrushColor = "Green"
+GraphicsWindow.Title = Title
+GraphicsWindow.Height = 800
+GraphicsWindow.Width = 1000
+GraphicsWindow.Clear()
+GraphicsWindow.DrawText(0,0,Title)
+
+'Drawing the shapes...'
+'Starting with lines'
+Math.GetRandomNumber(45)
+GraphicsWindow.PenColor = GraphicsWindow.GetRandomColor()
+GraphicsWindow.DrawLine(Math.GetRandomNumber(500),Math.GetRandomNumber(500),Math.GetRandomNumber(500),Math.GetRandomNumber(500))
+
+Math.GetRandomNumber(45)
+GraphicsWindow.PenColor = GraphicsWindow.GetRandomColor()
+GraphicsWindow.DrawLine(Math.GetRandomNumber(500),Math.GetRandomNumber(500),Math.GetRandomNumber(500),Math.GetRandomNumber(500))
+
+'Triangle'
+GraphicsWindow.PenWidth = Math.GetRandomNumber(30)
+GraphicsWindow.PenColor = GraphicsWindow.GetRandomColor()
+GraphicsWindow.DrawTriangle(Math.GetRandomNumber(500),Math.GetRandomNumber(500),Math.GetRandomNumber(500),Math.GetRandomNumber(500),Math.GetRandomNumber(500),Math.GetRandomNumber(500))
+
+GraphicsWindow.PenWidth = Math.GetRandomNumber(30)
+GraphicsWindow.PenColor = GraphicsWindow.GetRandomColor()
+GraphicsWindow.FillTriangle(Math.GetRandomNumber(500),Math.GetRandomNumber(500),Math.GetRandomNumber(500),Math.GetRandomNumber(500),Math.GetRandomNumber(500),Math.GetRandomNumber(500))
+
+'Elipse'
+GraphicsWindow.PenWidth = Math.GetRandomNumber(50)
+GraphicsWindow.PenColor = GraphicsWindow.GetRandomColor()
+GraphicsWindow.DrawEllipse(Math.GetRandomNumber(500),Math.GetRandomNumber(500),Math.GetRandomNumber(500),Math.GetRandomNumber(500),)
+
+GraphicsWindow.PenWidth = Math.GetRandomNumber(50)
+GraphicsWindow.PenColor = GraphicsWindow.GetRandomColor()
+GraphicsWindow.FillEllipse(Math.GetRandomNumber(500),Math.GetRandomNumber(500),Math.GetRandomNumber(500),Math.GetRandomNumber(500),)
+
+'Rectangles'
+GraphicsWindow.PenWidth = Math.GetRandomNumber(30)
+GraphicsWindow.PenColor = GraphicsWindow.GetRandomColor()
+GraphicsWindow.DrawRectangle(Math.GetRandomNumber(500),Math.GetRandomNumber(500),Math.GetRandomNumber(500),Math.GetRandomNumber(500),)
+
+GraphicsWindow.PenWidth = Math.GetRandomNumber(30)
+GraphicsWindow.PenColor = GraphicsWindow.GetRandomColor()
+GraphicsWindow.FillRectangle(Math.GetRandomNumber(500),Math.GetRandomNumber(500),Math.GetRandomNumber(500),Math.GetRandomNumber(500),)

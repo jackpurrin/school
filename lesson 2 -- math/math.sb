@@ -1,0 +1,63 @@
+'Lesson 2 Math Equations'
+
+'Vanity'
+Title = "Lesson 2 -- Math"
+TextWindow.BackgroundColor = "Black"
+TextWindow.ForegroundColor = "Green"
+TextWindow.Title = Title
+
+'Outputs the title and leaves a space for other output.'
+TextWindow.WriteLine(Title)
+TextWindow.WriteLine("")
+
+'Starting math...'
+'Lets add that'
+TextWindow.WriteLine("Addition Example.")
+TextWindow.WriteLine("")
+TextWindow.WriteLine("What two numbers do you want to add?")
+Number1 = TextWindow.ReadNumber()
+TextWindow.WriteLine("And the second number?")
+Number2 = TextWindow.ReadNumber()
+Answer1 = Number1 + Number2
+TextWindow.WriteLine("Your number is " + Answer1)
+TextWindow.WriteLine("Thats a big number! Lets remove some...")
+
+'Well, thats a big number! Lets remove some!'
+TextWindow.WriteLine("")
+TextWindow.WriteLine("Subtraction Example.")
+TextWindow.WriteLine("How much do you want to remove from that number?")
+Number3 = TextWindow.ReadNumber()
+Answer2 = Answer1 - Number3
+TextWindow.WriteLine("Let's see what you got now. " + Answer2)
+TextWindow.WriteLine("Thats a much better number.")
+
+'Two people want it now!'
+TextWindow.WriteLine("")
+TextWindow.WriteLine("Divsion Example.")
+TextWindow.WriteLine("Multiple people now want that number. Let's divide that number. How many people want it?")
+Number4 = TextWindow.ReadNumber()
+Answer3 = Answer2 / Number4
+TextWindow.WriteLine("That's a number of people. Here's how much you get. " + Answer3)
+
+'Lets fix that number'
+TextWindow.WriteLine("")
+TextWindow.WriteLine("Rounding Down Example.")
+TextWindow.WriteLine("Let's round down your number.")
+Answer4 = Math.Floor(Answer3)
+TextWindow.WriteLine("The number rounded down equals about " + Answer4)
+
+'Thats too much!'
+TextWindow.WriteLine("")
+TextWindow.WriteLine("Rounding Up Example.")
+TextWindow.WriteLine("Is your number too big? Let's round it down to find out!")
+Answer5 = Math.Ceiling(Answer4)
+TextWindow.WriteLine("The number rounded up equals about " + Answer5)
+
+'Cloning!'
+TextWindow.WriteLine("")
+TextWindow.WriteLine("Multiplication Example.")
+TextWindow.WriteLine("You discovered cloning! Lets multiply your number! How many clones do you want?")
+Number5 = TextWindow.ReadNumber()
+Answer6 = Answer5 * Number5
+TextWindow.WriteLine("You made quite a number in the end! " + Answer6)
+TextWindow.ReadNumber()

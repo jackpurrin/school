@@ -1,0 +1,61 @@
+'Lesson 4 -- String Manipulation'
+
+'Vanity'
+Title = "Lesson 4 -- String Manipulation"
+TextWindow.BackgroundColor = "Black" 'bet you've read these comments before in my other programs. :)'
+TextWindow.ForegroundColor = "Green" 
+TextWindow.Title = Title 
+TextWindow.Clear() 
+TextWindow.WriteLine(Title) 
+TextWindow.WriteLine("")
+TextWindow.WriteLine("Run ""help"" for a list of commands.")
+TextWindow.WriteLine("")
+
+'Creates an loop that checks what we have wrote.'
+While response <> "quit"
+  response = TextWindow.Read()
+  response = Text.ConvertToLowerCase(response)
+  'adds a delay, makes it seem human? weird, but works.'
+  Program.Delay(750)
+  'Searches for the preset word(s) in your response. in full, and automatically turns lowercase.'
+  If Text.IsSubText(response, "help") Then
+  TextWindow.ForegroundColor = "darkblue"
+  TextWindow.WriteLine("Hello")
+  TextWindow.WriteLine("Great")
+  TextWindow.WriteLine("What are you?")
+  TextWindow.WriteLine("When were you made?")
+  TextWindow.WriteLine("What time is it?")
+  TextWindow.WriteLine("How smart are you?")
+  TextWindow.ForegroundColor = "green"
+  EndIf
+  If Text.IsSubText(response, "hello") Then
+    TextWindow.ForegroundColor = "darkblue"
+    TextWindow.WriteLine("Hello! How's the weather?")
+    TextWindow.ForegroundColor = "green"
+  EndIf
+  If Text.IsSubText(response, "great") Then
+    TextWindow.ForegroundColor = "darkblue"
+    TextWindow.WriteLine("That sounds good!")
+    TextWindow.ForegroundColor = "green"
+  EndIf
+  If Text.IsSubText(response, "what are you?") Then
+    TextWindow.ForegroundColor = "darkblue"
+    TextWindow.WriteLine("A simple chat box made in Small Basic.")
+    TextWindow.ForegroundColor = "green"
+  EndIf
+  If Text.IsSubText(response, "when were you made?") Then
+    TextWindow.ForegroundColor = "darkblue"
+    TextWindow.WriteLine("Yesterday.")
+    TextWindow.ForegroundColor = "green"
+  EndIf
+  If Text.IsSubText(response, "what time is it?") Then
+    TextWindow.ForegroundColor = "darkblue"
+    TextWindow.WriteLine(Clock.Hour + " : " + Clock.Minute)
+    TextWindow.ForegroundColor = "green"
+  EndIf
+  If Text.IsSubText(response, "how smart are you?") Then
+    TextWindow.ForegroundColor = "darkblue"
+    TextWindow.WriteLine("Not sure. I guess that's up to the dev of this program.")
+    TextWindow.ForegroundColor = "green"
+  EndIf
+EndWhile

@@ -1,0 +1,25 @@
+'Lesson 3 Else/If Statements'
+
+'Vanity'
+Title = "Lesson 3 -- Else/If Statements"
+TextWindow.BackgroundColor = "Black"
+TextWindow.ForegroundColor = "Green"
+TextWindow.Title = Title
+
+'Outputs the title and leaves a space for other output.'
+TextWindow.WriteLine(Title)
+TextWindow.WriteLine("")
+
+'Begin to check the guessed number is the right number'
+TextWindow.WriteLine("Try to guess my number!")
+x = "N/A"
+While x <> 53
+x = TextWindow.ReadNumber()
+
+If x = "53" Then
+  TextWindow.WriteLine(x +", that is right!")
+  
+Else
+  TextWindow.WriteLine("Sorry, that isn't right...")
+EndIf
+EndWhile

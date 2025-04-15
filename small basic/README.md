@@ -1,5 +1,5 @@
 # school-sb-projects
-this is a repo full of my projects that we did while learning small basic.
+this is a folder full of my projects that we did while learning small basic.
 
 all of these are free to use if you need to use them for learning, as a reference, or a base for one of your projects.
 

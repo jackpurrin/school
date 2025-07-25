@@ -1,0 +1,158 @@
+<html lang="en" data-theme="dark">
+
+<head>
+<title>Lists! -- Assignment 1 HTML</title>
+  <style>
+  <!-- https://blog.duda.co/create-beautiful-website-tables -->
+  <!-- Stole code from my OWN website! https://github.com/hackpurrin/jackpurrin.me -->
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+	
+	ul.a {
+	  list-style-type: circle;
+	}
+
+	ul.b {
+      list-style-type: square;
+	}
+
+	ol.c {
+      list-style-type: upper-roman;
+	}
+
+	ol.d {
+      list-style-type: lower-alpha;
+	}
+	
+	body {
+      font-family: "Space Mono", sans-serif;
+      background-color: var(--color-bg);
+      color: var(--color-fg);
+	}
+	
+	h1, p, a, h3 {
+      font-size: clamp(var(--min), var(--val), var(--max));
+	}	
+
+	h1 {
+      --min: 2em; /* minimum value */
+      --val: 5vw; /* preferred value = 5% viewport width */
+      --max: 3em; /* maximum value */
+      color: white;
+      text-align: center;
+	}
+
+	p {
+      --min: 1em;
+      --val: 2.5vw;
+      --max: 1.5em;
+	}
+	
+	[data-theme="dark"] {
+      --color-bg: #222;
+      --color-fg: #ffffff;
+	}
+	
+	a:hover {
+      color: transparent;
+      transition: 200ms ease;
+      --min: 1.25em;
+      --val: 2.75vw;
+      --max: 1.75em;
+	}
+  </style>
+</head>
+
+<body>
+<h1>Lists! -- Assignment 1, Unordered Lists.</h1>
+<br>
+
+<!-- Starting a list of my favorite things.-->
+<h2>Unorded List of my favorite things</h2>
+<uo>
+	<li>Coding</li>
+	<li>My cat</li>
+	<li>Computers</li>
+	<li>Youtube and making youtube videos</li>
+	<li>Hacking</li>
+	<li style="cursor: pointer" onclick="javascript: window.location = 'https://jackpurrin.me/';">And my website!</li>
+</uo>
+
+<!-- Starting my tables-->
+<h2>Table of my Schedule</h2>
+<table>
+	<tr>
+		<td>Period 1</td>
+		<td>Period 2</td>
+		<td>Period 3</td>
+		<td>Period 4</td>
+		<td>Period 5</td>
+	</tr>
+	<tr>
+		<td>Computer Programming and Tech</td>
+		<td>Culinary Basics</td>
+		<td>Lunch</td>
+		<td>English 1</td>
+		<td>Personal Fitness B</td>
+	</tr>
+	<tr>
+		<td>7:20</td>
+		<td>8:58</td>
+		<td>10:32</td>
+		<td>11:04</td>
+		<td>12:50</td>
+	</tr>
+	<tr>
+		<td>C. Pound</td>
+		<td>N. Badger</td>
+		<td>Lunch Ladies</td>
+		<td>A. Coulter</td>
+		<td>E. Timothy</td>
+	</tr>
+	<tr>
+		<td># 1-113</td>
+		<td># 2-128</td>
+		<td>Cafeteria</td>
+		<td># 1-126</td>	
+		<td># 3-117</td>
+	</tr>
+</table>
+
+
+	<h3>Some cool ASCII art I found</h3>
+	<pre>
+	___________________________$$
+ _________________________$$$$
+ _______________________$$$$$$
+ ______________________$$$$$$
+ ______________________$$$$
+ ______________________$$
+ _________$$$$$$$$$$$$$_$$$$$$$$$$$$$
+ ______$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ ____$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ ___$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ __$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ _$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ _$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ _$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ _$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ __$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ ___$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ ____$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ _____$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ ______$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ ________$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ __________$$$$$$$$$$$$$$$$$$$$$$$$$
+ ____________$$$$$$$$$$$$$$$$$$$$$
+ ______________$$$$$$$$__$$$$$$$
+	</pre>

@@ -1,0 +1,72 @@
+body {
+  background-color: #222222;
+  color: white;
+}
+
+/* Font from Google Fonts in the h1 tag */
+
+h1 {
+  font-family: 'Jacquard 24';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/jacquard24/v2/jVyO7nf_B2zO5jVpUGU8ljQNf8lv9w.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* For aligning the text next to the images on the items on the menu. */
+
+.image-with-text {
+  display: flex;
+  align-items: center;
+}
+.image-with-text img {
+  margin-right: 10px; /* adjust as needed */
+}
+
+/* Adding styling for the icons*/
+
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+
+.fa-rss {
+  background: #ff6600;
+  color: white;
+}

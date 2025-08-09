@@ -8,6 +8,8 @@ import time
 
 def init():
     tracer(False) # helped me remove the turtle animation! https://stackoverflow.com/questions/59119036/how-do-i-make-a-turtle-run-faster#59119526 
+    hideturtle()
+    Screen().setup(250, 400)
 
 def circle(total_degrees, x, y, t_color):
     color(t_color)
@@ -18,6 +20,11 @@ def circle(total_degrees, x, y, t_color):
         left(1) # turns it left by one pixel
         total_degrees -= 1 # removes one degree, so it doesn't loop forever. you shouldn't usually need to use more than 365 tho.
     end_fill()
+    update()
 
 init()
-circle(365, 0, 120, 0, "red")
+circle(365, 0, 70, "red")
+circle(365, 0, -50, "blue")
+circle(365, 0, -170, "green")
+
+time.sleep(10)
